@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+  <script>
+    'use strict';
+    function sumToOne(n) 
+    {
+      var res = 0;
+      for (var i=1; i<=n; i++)
+      {
+        res += i;
+      }
+      return res;
+    }
+    
+    function sumToTwo(n)
+    {
+      if (n != 1)
+      {
+        return n + sumToTwo (n - 1);
+      } else {
+        return 1;
+      }
+    }
+    
+    var n = prompt("Число?", '');
+    alert( sumToOne(n) );
+    alert( sumToTwo(+n) );
+  </script>
+</body>
+
+</html>
